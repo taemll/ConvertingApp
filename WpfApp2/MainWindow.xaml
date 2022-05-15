@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="20" >
+            <TextBox x:Name="inputValue" HorizontalAlignment="Center" TextWrapping="Wrap"  Width="160" Margin="5 0"/>
+            <ComboBox x:Name="input_combobox" HorizontalAlignment="Center" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="20">
+            <ComboBox x:Name="output_combobox" HorizontalAlignment="Center" />
+            <Button Content="switch" HorizontalAlignment="Center" Margin="10 0" Click="btn_switch_click"/>
+
+        </StackPanel>
+        <StackPanel Grid.ColumnSpan="2" Orientation="Vertical" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="top" Margin="20">
+        <TextBox x:Name="output" HorizontalAlignment="Center" Width="160"/>
+        <Button Content="enter" HorizontalAlignment="Center" Margin="5" Click="btn_output_click"/> 
+        </StackPanel >
+
+
+    </Grid>
+</Window>
